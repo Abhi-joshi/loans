@@ -30,7 +30,7 @@ public class LoanServiceImpl implements LoanService {
 
     @Override
     public Mono<ConfigProperties> getProperties() {
-        ConfigProperties configProperties = new ConfigProperties(this.loansConfig.getMsg());
+        ConfigProperties configProperties = new ConfigProperties(this.loansConfig.getMsg(), this.loansConfig.getPassword());
         return Mono.just(configProperties);
     }
 }

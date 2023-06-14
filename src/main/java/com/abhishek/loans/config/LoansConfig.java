@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "loans")
 public class LoansConfig {
     private String msg;
+    private String password;
 
     public String getMsg() {
         return msg;
@@ -14,5 +15,13 @@ public class LoansConfig {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
